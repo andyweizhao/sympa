@@ -43,7 +43,9 @@ class SiegelManifold(Manifold, ABC):
         Calculates the distance for the Upper Half Space Manifold (UHSM)
         It is implemented here since the way to calculate distances in the Bounded Domain Manifold
         requires mapping the points to the UHSM, and then applying this formula.
-
+        
+        Section B.4 in https://arxiv.org/pdf/2106.04941.pdf
+        
         :param z1, z2: b x 2 x n x n: elements in the UHSM
         :param keepdim:
         :return: distance between x and y in the UHSM
